@@ -1,6 +1,6 @@
-Adventure Memories
+### Adventure Memories
 
-# What project is about and its purpose
+### What project is about and its purpose
 
 ### Requirements
     * Have json-server installed
