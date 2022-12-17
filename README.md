@@ -1,4 +1,4 @@
-### Adventure Memories
+# Adventure Memories
 
 ### What project is about and its purpose
 
