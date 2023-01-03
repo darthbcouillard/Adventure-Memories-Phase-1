@@ -20,7 +20,15 @@ function addMemoryListeners() {
 }
 
 function deleteMemory(event) {
-    console.log(event.target)
+    console.log(event.target.parentElement.parentElement.id)
+    fetch(`http://localhost:3000/memories/${event.target.parentElement.parentElement.id}`, {
+        method: "DELETE",
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        }
+    })
+    
 }
 
 function renderAllMemories(memories) {
@@ -38,6 +46,7 @@ function renderSingleMemory(memory) {
     </div>
 </div>
     `
+
 }
 
 function addMemory(event) {
