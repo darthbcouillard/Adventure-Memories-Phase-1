@@ -1,23 +1,28 @@
 {
-    "memories": [
-        {
-            "id": 1,
-            "title": "Sedona Christmas",
-            "year": "2021",
-            "body": "Had our first adventure with just the two of us, in Sedona AZ. We hiked Bear Mountain and also checked out some of the energy vortex hikes!"
-        },
-        {
-            "id": 2,
-            "title": "Valley of Fire",
-            "year": "2022",
-            "body": "First week of the new year we hiked at Valley of Fire State Park in Nevada, about an hour away from Vegas. We hiked with our friend John. We did some scrambling and off trail hiking, and saw some goats high up on some cliffs!"
-        },
-        {
-            "id": 3,
-            "title": "memory 3",
-            "year": "2022",
-            "body": "memory 3"
-        }
-    ]
-
+  "memories": [
+    {
+      "id": 1,
+      "title": "Sedona Christmas",
+      "date": "December 2021",
+      "body": "Had our first adventure with just the two of us, in Sedona AZ. We hiked Bear Mountain and also checked out some of the energy vortex hikes!"
+    },
+    {
+      "id": 2,
+      "title": "Valley of Fire",
+      "date": "January 2022",
+      "body": "First week of the new year we hiked at Valley of Fire State Park in Nevada, about an hour away from Vegas. We hiked with our friend John. We did some scrambling and off trail hiking, and saw some goats high up on some cliffs!"
+    },
+    {
+      "id": 3,
+      "title": "Goldstrike Hotsprings Night Hike",
+      "date": "January 2022",
+      "body": "We hike the 2.5 hour each direction Goldstrike hike with seven roped scrambles to soak in the springs under the stars!"
+    },
+    {
+      "title": "Death Valley",
+      "date": "February 2022",
+      "body": "Explored many unique locations including the Dunes and the Devil's Racetrack! Ran the Suby through the ringer on hours of washboard roads deep in the middle of nowhere!",
+      "id": 4
+    }
+  ]
 }

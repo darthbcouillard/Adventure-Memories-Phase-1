@@ -1,12 +1,12 @@
-.card {
-    background: hwb(0 96% 3%);
+.memory-card {
+    background: hwb(199 73% 4%);
     display: inline-grid;
     padding: 0px;
     text-align: center;
     margin-left: 10px; 
     }
 
-    #main {
+    #memory-container {
         box-sizing: border-box;
         text-align: center;
       }

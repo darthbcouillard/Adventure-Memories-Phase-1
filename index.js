@@ -1,5 +1,6 @@
 window.addEventListener("DOMContentLoaded", () => {
     fetchMemories()
+    document.querySelector('#new-memory').addEventListener("submit", addMemory)
 })
 
 function fetchMemories() {
@@ -21,10 +22,32 @@ function renderSingleMemory(memory) {
     <div class="memory-card" id="${memory.id}">
         <div class="memory-frame">
             <h1 class="center-text">${memory.title}</h1>
-                <p>${memory.year}</p>
+                <p>${memory.date}</p>
                 <p>${memory.body}</p>
             <button data-action="delete" class="memory-delete-button">Delete</button><br></br> 
     </div>
 </div>
     `
+}
+
+function addMemory(event) {
+    event.preventDefault()
+    const memory = {
+        title: document.querySelector('#title').value, 
+        year: document.querySelector('#date').value,
+        body: document.querySelector('#body').value
+        
+    }
+    fetch("http://localhost:3000/memories", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify(memory)
+    })
+    .then(res => res.json())
+    .then(data => {
+       console.log(data) 
+    })
 }
