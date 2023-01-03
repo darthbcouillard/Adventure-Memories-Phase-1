@@ -10,6 +10,7 @@ function fetchMemories() {
         console.log(data)
         const memories = document.querySelector("#memory-container")
         memories.innerHTML = renderAllMemories(data)
+        
     })
 }
 
@@ -48,6 +49,8 @@ function addMemory(event) {
     })
     .then(res => res.json())
     .then(data => {
-       console.log(data) 
+       console.log(data)
+       const memories = document.querySelector("#memory-container")
+       memories.innerHTML += renderSingleMemory(data)
     })
 }
