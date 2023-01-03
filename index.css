@@ -1,0 +1,12 @@
+.card {
+    background: hwb(0 96% 3%);
+    display: inline-grid;
+    padding: 0px;
+    text-align: center;
+    margin-left: 10px; 
+    }
+
+    #main {
+        box-sizing: border-box;
+        text-align: center;
+      }

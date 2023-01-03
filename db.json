@@ -2,39 +2,21 @@
     "memories": [
         {
             "id": 1,
-            "Title": "Sedona Christmas",
+            "title": "Sedona Christmas",
             "year": "2021",
-            "image": "https://picture.url.goes.here.jpg",
             "body": "Had our first adventure with just the two of us, in Sedona AZ. We hiked Bear Mountain and also checked out some of the energy vortex hikes!"
         },
         {
             "id": 2,
-            "Title": "Valley of Fire",
+            "title": "Valley of Fire",
             "year": "2022",
-            "image": "https://picture.url.goes.here.jpg",
             "body": "First week of the new year we hiked at Valley of Fire State Park in Nevada, about an hour away from Vegas. We hiked with our friend John. We did some scrambling and off trail hiking, and saw some goats high up on some cliffs!"
         },
         {
             "id": 3,
-            "Title": "memory 3",
+            "title": "memory 3",
             "year": "2022",
-            "image": "https://picture.url.goes.here.jpg",
             "body": "memory 3"
-        },
-        {
-            "id": 4,
-            "Title": "memory 4",
-            "year": "2022",
-            "image": "https://picture.url.goes.here.jpg",
-            "body": "memory 4"
-
-        },
-        {
-            "id": 5,
-            "Title": "memory 5",
-            "year": "2022",
-            "image": "https://picture.url.goes.here.jpg",
-            "body": "memory 5"
         }
     ]
 

@@ -6,29 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adventure Memories</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script> 
+    $(document).ready(function(){
+        $(".dropdown-trigger").dropdown();
+      
+      });
+    </script>
 </head>
-<body>
+<body style="background-color: #eff2f3">
+    
     <ul id="dropdown1" class="dropdown-content">
-        <li><a href="#!">one</a></li>
-        <li><a href="#!">two</a></li>
-        <li class="divider"></li>
-        <li><a href="#!">three</a></li>
+        <li><a href="#!" id="all">All Memories</a></li>
+        <li><a href="#!" id="park">National Parks</a></li>
+        <li><a href="#!" id="create">Create Memory</a></li>
       </ul>
       <nav>
         <div class="nav-wrapper">
           <a href="#!" class="brand-logo center">Adventure Memories</a>
           <ul class="right hide-on-med-and-down">
-            <li><a href="#!">Memories</a></li>
+            
             
             <!-- Dropdown Trigger -->
-            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Year<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Actions<i class="material-icons right">arrow_drop_down</i></a></li>
           </ul>
         </div>
       </nav>
+      <div id="memory-container">
+            <p><center>There are no memories</center></p>
+
+      </div>
    
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="index.js"></script>     
 </body>
 </html>
