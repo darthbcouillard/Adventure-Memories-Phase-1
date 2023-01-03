@@ -34,7 +34,7 @@ function addMemory(event) {
     event.preventDefault()
     const memory = {
         title: document.querySelector('#title').value, 
-        year: document.querySelector('#date').value,
+        date: document.querySelector('#date').value,
         body: document.querySelector('#body').value
         
     }
