@@ -10,8 +10,17 @@ function fetchMemories() {
         console.log(data)
         const memories = document.querySelector("#memory-container")
         memories.innerHTML = renderAllMemories(data)
-        
+        addMemoryListeners()
     })
+}
+
+function addMemoryListeners() {
+    const memories = document.querySelector("#memory-container")
+    memories.addEventListener('click', deleteMemory)
+}
+
+function deleteMemory(event) {
+    console.log(event.target)
 }
 
 function renderAllMemories(memories) {
@@ -52,5 +61,8 @@ function addMemory(event) {
        console.log(data)
        const memories = document.querySelector("#memory-container")
        memories.innerHTML += renderSingleMemory(data)
+       document.querySelector('#title').value = "",
+       document.querySelector('#date').value = "",
+       document.querySelector('#body').value = ""
     })
 }
