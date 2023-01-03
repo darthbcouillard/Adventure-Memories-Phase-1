@@ -5,7 +5,7 @@
 ### Requirements
     * Have json-server installed
 
-### Instalation Instructions
+### Installation Instructions
     * Fork and clone
     * Run json server for db.json
     * Open index.html in the browser
