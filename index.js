@@ -15,20 +15,21 @@ function fetchMemories() {
 }
 
 function addMemoryListeners() {
-    const memories = document.querySelector("#memory-container")
-    memories.addEventListener('click', deleteMemory)
+    const memories = document.querySelectorAll(".memory-delete-button")
+    memories.forEach(td => td.addEventListener('click', deleteMemory))
 }
 
 function deleteMemory(event) {
-    console.log(event.target.parentElement.parentElement.id)
-    fetch(`http://localhost:3000/memories/${event.target.parentElement.parentElement.id}`, {
+    console.log(event.target.id)
+    fetch(`http://localhost:3000/memories/${event.target.id}`, {
         method: "DELETE",
         headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
         }
     })
-    
+    const memoryCard = event.target.parentElement.parentElement
+    document.querySelector("#memory-container").removeChild(memoryCard)
 }
 
 function renderAllMemories(memories) {
@@ -39,10 +40,10 @@ function renderSingleMemory(memory) {
     return `
     <div class="memory-card" id="${memory.id}">
         <div class="memory-frame">
-            <h1 class="center-text">${memory.title}</h1>
+            <h3 class="center-text">${memory.title}</h3>
                 <p>${memory.date}</p>
                 <p>${memory.body}</p>
-            <button data-action="delete" class="memory-delete-button">Delete</button><br></br> 
+            <button data-action="delete" id="${memory.id}" class="memory-delete-button">Delete</button><br></br> 
     </div>
 </div>
     `
@@ -68,10 +69,11 @@ function addMemory(event) {
     .then(res => res.json())
     .then(data => {
        console.log(data)
-       const memories = document.querySelector("#memory-container")
-       memories.innerHTML += renderSingleMemory(data)
+    //    const memories = document.querySelector("#memory-container")
+    //    memories.innerHTML += renderSingleMemory(data)
        document.querySelector('#title').value = "",
        document.querySelector('#date').value = "",
-       document.querySelector('#body').value = ""
+       document.querySelector('#body').value = "",
+       fetchMemories()
     })
 }
