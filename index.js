@@ -38,9 +38,8 @@ function renderAllMemories(memories) {
 
 function renderSingleMemory(memory) {
     return `
-    <div class="row" id="${memory.id}">
-        <div class="column">
-            <div class="card">
+    <div class="memory-card" id="${memory.id}">
+            <div class="memory-frame">
                 <h3 class="center-text">${memory.title}</h3>
                     <p>${memory.date}</p>
                     <p>${memory.body}</p>
