@@ -45,3 +45,8 @@
 .memory-button {
     border-radius: 5px;
 }
+
+.nav-wrapper {
+    background-color: rgb(44, 44, 247);
+    font-family: "Roboto", sans-serif;
+}
