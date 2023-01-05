@@ -17,10 +17,10 @@
     align-self: normal;
     text-align: center;
     background-color: #a3d9f6;
-    height: 500px;
+    height: 450px;
     position: relative;
     display: flex;
-    
+    font-family: "Roboto", sans-serif;
 }
 
 .memory-frame h4 {
