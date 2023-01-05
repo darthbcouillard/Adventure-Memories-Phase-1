@@ -1,39 +1,23 @@
-
-
-    #memory-container {
-        background: hwb(204 95% 3%);
-        
-      }
-
 /* Float four columns side by side */
-.column {
-    float: left;
+.memory-card {
+    float: left; 
     width: 25%;
-    padding: 0 10px;
-  }
-  
-
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Responsive columns */
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-    }
-  }
-  
+    padding: 0 10px;   
+}
+    
   /* Style the counter cards */
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 16px;
+.memory-frame {
+    flex: 1 1 20rem;
+    display: flex;
+    margin: 10px 20px;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    align-self: normal;
     text-align: center;
     background-color: #a3d9f6;
-  }
+    height: 500px;
+    
+}
+
