@@ -43,9 +43,9 @@ function renderSingleMemory(memory) {
                 <h4 class="center-text">${memory.title}</h4>
                     <p>${memory.date}</p>
                     <p>${memory.body}</p>
-                <button data-action="delete" id="${memory.id}" class="memory-delete-button">Delete</button><br></br> 
+                    <button data-action="delete" id="${memory.id}" class="memory-delete-button">Delete</button><br></br>
+            </div>
     </div>
-</div>
     `
 
 }
