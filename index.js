@@ -40,7 +40,7 @@ function renderSingleMemory(memory) {
     return `
     <div class="memory-card" id="${memory.id}">
             <div class="memory-frame">
-                <h3 class="center-text">${memory.title}</h3>
+                <h4 class="center-text">${memory.title}</h4>
                     <p>${memory.date}</p>
                     <p>${memory.body}</p>
                 <button data-action="delete" id="${memory.id}" class="memory-delete-button">Delete</button><br></br> 

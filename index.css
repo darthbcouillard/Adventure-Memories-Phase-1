@@ -21,3 +21,7 @@
     
 }
 
+.memory-frame h4 {
+    text-transform: uppercase;
+    margin: 10px 0;
+}
