@@ -12,10 +12,10 @@ This is an app that will allow me to track my adventure memories with my partner
 
 
 ### Installation Instructions
-    * Have json-server installed
-    * Fork and clone
-    * Run json server for db.json
-    * Open index.html in the browser
+* Have json-server installed
+* Fork and clone
+* Run json server for db.json
+* Open index.html in the browser
 
 
 
