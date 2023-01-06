@@ -1,7 +1,7 @@
 # Adventure Memories
 
 ### What project is about and its purpose
-    This is an app that will allow me to track my adventure memories with my partner as we travel the outdoors. It will allow the ability to view the memories all together, as well as to add and remove memories. It will track a title, date, and short description for each memory.
+This is an app that will allow me to track my adventure memories with my partner as we travel the outdoors. It will allow the ability to view the memories all together, as well as to add and remove memories. It will track a title, date, and short description for each memory.
 
 ### Project Requirements
     * HTML/JS/CSS frontend that runs on a single page that accesses data from a db.json file using json-server
