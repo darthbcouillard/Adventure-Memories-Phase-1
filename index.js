@@ -68,9 +68,6 @@ function addMemory(event) {
     })
     .then(res => res.json())
     .then(data => {
-       console.log(data)
-    //    const memories = document.querySelector("#memory-container")
-    //    memories.innerHTML += renderSingleMemory(data)
        document.querySelector('#title').value = "",
        document.querySelector('#date').value = "",
        document.querySelector('#body').value = "",

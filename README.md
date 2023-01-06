@@ -1,6 +1,6 @@
 # Adventure Memories
 
-### What project is about and its purpose
+### Overview
 This is an app that will allow me to track my adventure memories with my partner as we travel the outdoors. It will allow the ability to view the memories all together, as well as to add and remove memories. It will track a title, date, and short description for each memory.
 
 ### Project Requirements
