@@ -19,16 +19,22 @@
       "id": 3
     },
     {
-      "title": "Death Valley Hike",
+      "title": "Death Valley",
       "date": "February 2022",
       "body": "Explored many unique locations including the Dunes and the Devil's Racetrack! Ran the Suby through the ringer on hours of washboard roads deep in the middle of nowhere!",
       "id": 4
     },
     {
       "title": "Joshua Tree",
-      "date": "March 2022",
+      "date": "February 2022",
       "body": "Hiked Ryan Mountain and did some scrambling in the Hall of Horrors! Visited the Moorten Botanical Gardens!",
       "id": 5
+    },
+    {
+      "title": "Winona MN",
+      "date": "March 2022",
+      "body": "Did ice climbing for the first time! Also celebrated Cowgirl's birthday with the VE crew up there! ",
+      "id": 6
     }
   ]
 }

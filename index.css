@@ -55,4 +55,6 @@
 
 nav .brand-logo {
     font-size: 50px;
+    font-family: fantasy;
+    text-transform: uppercase;
 } 

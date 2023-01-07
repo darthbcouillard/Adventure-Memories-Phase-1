@@ -8,7 +8,7 @@ This is an app that will allow me to track my adventure memories with my partner
 * db.json returns 5+ objects with 3 attributes each
 * Interactions between client and API are handled asynchronously
 * Uses three distinct types of event listeners (DOMContentLoaded, click, submit)
-* Implements array iteration using both map() and forEach()
+* Implements at least one array iteration, I used both map() and forEach()
 
 
 ### Installation Instructions

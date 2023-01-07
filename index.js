@@ -7,34 +7,17 @@ function fetchMemories() {
     fetch("http://localhost:3000/memories")
     .then(res => res.json())
     .then(data => {
-        console.log(data)
         const memories = document.querySelector("#memory-container")
         memories.innerHTML = renderAllMemories(data)
-        addMemoryListeners()
+        addDeleteListeners()
     })
 }
 
-function addMemoryListeners() {
-    const memories = document.querySelectorAll(".memory-delete-button")
-    memories.forEach(td => td.addEventListener('click', deleteMemory))
-}
-
-function deleteMemory(event) {
-    console.log(event.target.id)
-    fetch(`http://localhost:3000/memories/${event.target.id}`, {
-        method: "DELETE",
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        }
-    })
-    const memoryCard = event.target.parentElement.parentElement
-    document.querySelector("#memory-container").removeChild(memoryCard)
-}
 
 function renderAllMemories(memories) {
     return memories.map(mem => renderSingleMemory(mem)).join("")
 }
+
 
 function renderSingleMemory(memory) {
     return `
@@ -47,7 +30,6 @@ function renderSingleMemory(memory) {
             </div>
     </div>
     `
-
 }
 
 function addMemory(event) {
@@ -73,4 +55,21 @@ function addMemory(event) {
        document.querySelector('#body').value = "",
        fetchMemories()
     })
+}
+
+function addDeleteListeners() {
+    const memories = document.querySelectorAll(".memory-delete-button")
+    memories.forEach(td => td.addEventListener('click', deleteMemory))
+}
+
+function deleteMemory(event) {
+    fetch(`http://localhost:3000/memories/${event.target.id}`, {
+        method: "DELETE",
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        }
+    })
+    const memoryCard = event.target.parentElement.parentElement
+    document.querySelector("#memory-container").removeChild(memoryCard)
 }
