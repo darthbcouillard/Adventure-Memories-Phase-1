@@ -9,18 +9,19 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="index.js"></script> 
+    <!-- <script> 
     $(document).ready(function(){
         $(".dropdown-trigger").dropdown();
       
       });
-    </script>
+    </script> -->
 </head>
 <body style="background-color: #eff2f3">
     
     <!-- <ul id="dropdown1" class="dropdown-content">
         <li><a href="#!" id="all">All Memories</a></li>
-        <li><a href="#!" id="park">National Parks</a></li>
         <li><a href="#!" id="create">Create Memory</a></li>
       </ul> -->
       <nav>
@@ -36,9 +37,9 @@
       </nav>
       <form id="new-memory">
         <p>Add Memory:</p>
-        <input id="title" type="text" placeholder="Title"></input>
-        <input id="date" type="text" placeholder="Date"></input>
-        <input id="body" type="text" placeholder="Short Description"></input>
+        <input id="title" type="text" placeholder="Title">
+        <input id="date" type="text" placeholder="Date">
+        <input id="body" type="text" placeholder="Short Description">
         <input id="submit" class="memory-button" type="submit">
       </form>
       <div id="memory-container">
@@ -47,7 +48,6 @@
       </div>
    
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-<script src="index.js"></script>     
+    
 </body>
 </html>

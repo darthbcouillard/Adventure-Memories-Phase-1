@@ -10,7 +10,9 @@ function fetchMemories() {
         const memories = document.querySelector("#memory-container")
         memories.innerHTML = renderAllMemories(data)
         addDeleteListeners()
+        likeButtonListener()
     })
+    
 }
 
 
@@ -21,16 +23,28 @@ function renderAllMemories(memories) {
 
 function renderSingleMemory(memory) {
     return `
-    <div class="memory-card" id="${memory.id}">
+     <div class="memory-card">
             <div class="memory-frame">
                 <h4 class="center-text">${memory.title}</h4>
                     <p>${memory.date}</p>
                     <p>${memory.body}</p>
                     <button data-action="delete" id="${memory.id}" class="memory-delete-button">Delete</button><br></br>
+                    <button id="${memory.id}" class="like-button">0</button><br></br>
             </div>
     </div>
     `
 }
+
+function likeButtonListener() {
+    const likeAction = document.querySelectorAll(".like-button")
+    likeAction.forEach(td => td.addEventListener('click', addLike))
+
+}
+
+function addLike(event) {
+    event.target.innerHTML = 1
+}
+
 
 function addMemory(event) {
     event.preventDefault()
@@ -50,10 +64,8 @@ function addMemory(event) {
     })
     .then(res => res.json())
     .then(data => {
-       document.querySelector('#title').value = "",
-       document.querySelector('#date').value = "",
-       document.querySelector('#body').value = "",
-       fetchMemories()
+        event.target.reset()
+        fetchMemories()
     })
 }
 
@@ -73,3 +85,6 @@ function deleteMemory(event) {
     const memoryCard = event.target.parentElement.parentElement
     document.querySelector("#memory-container").removeChild(memoryCard)
 }
+
+
+
