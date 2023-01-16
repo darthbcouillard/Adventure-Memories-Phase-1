@@ -25,10 +25,34 @@
       "id": 5
     },
     {
-      "title": "testy1",
+      "title": "Winona MN",
       "date": "March 2022",
       "body": "Did ice climbing for the first time! Also celebrated Cowgirl's birthday with the VE crew up there! ",
       "id": 6
+    },
+    {
+      "title": "Great Sand Dunes",
+      "date": "April 2022",
+      "body": "Braved a sandstorm and cold weather to hike up the dunes surrounded by the snow covered 14ers!",
+      "id": 7
+    },
+    {
+      "title": "Red River Gorge KY",
+      "date": "June 2022",
+      "body": "Rented a cute cabin and climbed for several days on the beautiful sandstone!",
+      "id": 8
+    },
+    {
+      "title": "San Antonio TX",
+      "date": "June 2022",
+      "body": "Visited the Alamo and one of our favorite botanic gardens so far, the San Antonio Botanic garden!",
+      "id": 9
+    },
+    {
+      "title": "Monument Valley",
+      "date": "April 2022",
+      "body": "Morning horseback ride with cowgirl among the beautiful rock formations!",
+      "id": 10
     }
   ]
 }

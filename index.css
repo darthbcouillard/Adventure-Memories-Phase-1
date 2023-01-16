@@ -1,15 +1,20 @@
 /* Float four columns side by side */
 .memory-card {
-    float: left; 
-    width: 25%;
-    padding: 0 10px;   
+  
+  text-align: center;
+  border: grey solid 1px;
+  padding: 1rem;
+  width: 15rem;
+  height: 28rem;
+  display: inline-grid;
+  margin: 1rem 2rem;
+  box-shadow: 3px 4px #48dff9   
 }
     
   /* Style the counter cards */
 .memory-frame {
-    /* flex: 1 1 20rem;
-    display: flex; */
-    margin: 10px 20px;
+    
+    /* margin: 10px 20px;
     flex-direction: column;
     background: #fff;
     box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.4);
@@ -20,7 +25,7 @@
     height: 450px;
     position: relative;
     display: flex;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif; */
 }
 
 .memory-frame h4 {
@@ -28,7 +33,7 @@
     margin: 10px 0;
 }
 
-.memory-delete-button {
+/* .memory-delete-button {
     border-radius: 5px;
     display: flex;
     height: 30px;
@@ -40,7 +45,21 @@
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     transform: translateX(-50%);
-}
+} */
+
+/* .memory-delete-button {
+    position: relative;
+    background-color: #e04b52;
+    border: none;
+    border-radius: 5px;
+    height: 3rem;
+    width: max-content;
+    color: whitesmoke;
+    font-size: 18px;
+    justify-self: center;
+} */
+
+
 
 .memory-button {
     border-radius: 5px;
@@ -58,3 +77,4 @@ nav .brand-logo {
     font-family: fantasy;
     text-transform: uppercase;
 } 
+

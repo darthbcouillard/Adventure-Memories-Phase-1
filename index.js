@@ -7,43 +7,58 @@ function fetchMemories() {
     fetch("http://localhost:3000/memories")
     .then(res => res.json())
     .then(data => {
-        const memories = document.querySelector("#memory-container")
-        memories.innerHTML = renderAllMemories(data)
-        addDeleteListeners()
-        likeButtonListener()
+        const memories = data
+        memories.map(memory => renderSingleMemory(memory))
     })
     
 }
 
 
-function renderAllMemories(memories) {
-    return memories.map(mem => renderSingleMemory(mem)).join("")
-}
-
-
+    
 function renderSingleMemory(memory) {
-    return `
-     <div class="memory-card">
-            <div class="memory-frame">
-                <h4 class="center-text">${memory.title}</h4>
-                    <p>${memory.date}</p>
-                    <p>${memory.body}</p>
-                    <button data-action="delete" id="${memory.id}" class="memory-delete-button">Delete</button><br></br>
-                    <button id="${memory.id}" class="like-button">0</button><br></br>
-            </div>
-    </div>
-    `
+    const memoryCollection = document.getElementById("memory-container")
+    const div = document.createElement("div")
+    div.classList.add("memory-card")
+    const h4 = document.createElement("h4")
+    h4.textContent = memory.title
+    const p = document.createElement("p")
+    p.textContent = memory.date
+    const p2 = document.createElement("p2")
+    p2.textContent = memory.body
+    const deleteButton = document.createElement("button")
+    deleteButton.textContent = "Delete"
+    deleteButton.classList.add("memory-delete-button")
+    deleteButton.id = memory.id
+    deleteButton.addEventListener("click", (event) => {
+        fetch(`http://localhost:3000/memories/${memory.id}`, {
+            method: "DELETE",
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+        })
+        const memoryCard = event.target.parentElement
+        memoryCard.parentElement.removeChild(memoryCard)
+    })
+    div.append(h4, p, p2, deleteButton)
+    memoryCollection.append(div)
 }
 
-function likeButtonListener() {
-    const likeAction = document.querySelectorAll(".like-button")
-    likeAction.forEach(td => td.addEventListener('click', addLike))
 
-}
+// function renderSingleMemory(memory) {
+//     return `
+//      <div class="memory-card">
+//             <div class="memory-frame">
+//                 <h4 class="center-text">${memory.title}</h4>
+//                     <p>${memory.date}</p>
+//                     <p>${memory.body}</p>
+//                     <button data-action="delete" id="${memory.id}" class="memory-delete-button">Delete</button><br></br>
+//             </div>
+//     </div>
+//     `
+// }
 
-function addLike(event) {
-    event.target.innerHTML = 1
-}
+
 
 
 function addMemory(event) {
@@ -52,8 +67,7 @@ function addMemory(event) {
         title: document.querySelector('#title').value, 
         date: document.querySelector('#date').value,
         body: document.querySelector('#body').value
-        
-    }
+        }
     fetch("http://localhost:3000/memories", {
         method: "POST",
         headers: {
@@ -65,26 +79,11 @@ function addMemory(event) {
     .then(res => res.json())
     .then(data => {
         event.target.reset()
-        fetchMemories()
+        renderSingleMemory(data)
     })
 }
 
-function addDeleteListeners() {
-    const memories = document.querySelectorAll(".memory-delete-button")
-    memories.forEach(td => td.addEventListener('click', deleteMemory))
-}
 
-function deleteMemory(event) {
-    fetch(`http://localhost:3000/memories/${event.target.id}`, {
-        method: "DELETE",
-        headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        }
-    })
-    const memoryCard = event.target.parentElement.parentElement
-    document.querySelector("#memory-container").removeChild(memoryCard)
-}
 
 
 
