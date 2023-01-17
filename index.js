@@ -3,6 +3,8 @@ window.addEventListener("DOMContentLoaded", () => {
     document.querySelector('#new-memory').addEventListener("submit", addMemory)
 })
 
+
+
 function fetchMemories() {
     fetch("http://localhost:3000/memories")
     .then(res => res.json())
@@ -12,6 +14,7 @@ function fetchMemories() {
     })
     
 }
+
 
 
     
@@ -29,34 +32,28 @@ function renderSingleMemory(memory) {
     deleteButton.textContent = "Delete"
     deleteButton.classList.add("memory-delete-button")
     deleteButton.id = memory.id
-    deleteButton.addEventListener("click", (event) => {
-        fetch(`http://localhost:3000/memories/${memory.id}`, {
-            method: "DELETE",
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            }
-        })
-        const memoryCard = event.target.parentElement
-        memoryCard.parentElement.removeChild(memoryCard)
-    })
+    deleteButton.addEventListener("click", () => deleteMemory(memory.id))
     div.append(h4, p, p2, deleteButton)
     memoryCollection.append(div)
 }
 
-//          Legacy renderSingleMemory
-// function renderSingleMemory(memory) {
-//     return `
-//      <div class="memory-card">
-//             <div class="memory-frame">
-//                 <h4 class="center-text">${memory.title}</h4>
-//                     <p>${memory.date}</p>
-//                     <p>${memory.body}</p>
-//                     <button data-action="delete" id="${memory.id}" class="memory-delete-button">Delete</button><br></br>
-//             </div>
-//     </div>
-//     `
-// }
+
+
+function deleteMemory(id) {
+    fetch(`http://localhost:3000/memories/${id}`, {
+        method: "DELETE",
+        headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        }
+    })
+    .then(() => {
+        const memoryCard = document.getElementById(id).parentElement;
+        memoryCard.parentElement.removeChild(memoryCard)
+    })
+}
+
+
 
 
 
@@ -64,10 +61,10 @@ function renderSingleMemory(memory) {
 function addMemory(event) {
     event.preventDefault()
     const memory = {
-        title: document.querySelector('#title').value, 
-        date: document.querySelector('#date').value,
-        body: document.querySelector('#body').value
-        }
+        title: document.getElementById('title').value, 
+        date: document.getElementById('date').value,
+        body: document.getElementById('body').value
+    }
     fetch("http://localhost:3000/memories", {
         method: "POST",
         headers: {
@@ -87,3 +84,17 @@ function addMemory(event) {
 
 
 
+
+//          Legacy renderSingleMemory
+// function renderSingleMemory(memory) {
+//     return `
+//      <div class="memory-card">
+//             <div class="memory-frame">
+//                 <h4 class="center-text">${memory.title}</h4>
+//                     <p>${memory.date}</p>
+//                     <p>${memory.body}</p>
+//                     <button data-action="delete" id="${memory.id}" class="memory-delete-button">Delete</button><br></br>
+//             </div>
+//     </div>
+//     `
+// }
