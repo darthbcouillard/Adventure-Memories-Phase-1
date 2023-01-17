@@ -3,10 +3,10 @@ window.addEventListener("DOMContentLoaded", () => {
     document.querySelector('#new-memory').addEventListener("submit", addMemory)
 })
 
-
+const baseURL = "http://localhost:3000/memories"
 
 function fetchMemories() {
-    fetch("http://localhost:3000/memories")
+    fetch(baseURL)
     .then(res => res.json())
     .then(data => {
         const memories = data
@@ -65,7 +65,7 @@ function addMemory(event) {
         date: document.getElementById('date').value,
         body: document.getElementById('body').value
     }
-    fetch("http://localhost:3000/memories", {
+    fetch(baseURL, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
