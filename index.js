@@ -44,7 +44,7 @@ function renderSingleMemory(memory) {
     memoryCollection.append(div)
 }
 
-
+//          Legacy renderSingleMemory
 // function renderSingleMemory(memory) {
 //     return `
 //      <div class="memory-card">
